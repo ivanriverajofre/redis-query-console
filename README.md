@@ -14,6 +14,7 @@ To query in a standalone Redis server, in localhost port 6379:
 	{"id":1, "name":"Iván Rivera"}
 
 To query in a Redis cluster with two nodes:
+
 	java -jar redis-query-console-1.0.0.jar node1:6379,node2:6379 Customer::1
 	Using Redis host(s):node1:6379,node2:6379
 	Querying: Customer::1
@@ -21,6 +22,7 @@ To query in a Redis cluster with two nodes:
 	{"id":1, "name":"Iván Rivera"}
 
 To query in a Redis cluster with two nodes and a password:
+
 	java -jar redis-query-console-1.0.0.jar node1:6379,node2:6379 mypassword Customer::1
 	Using Redis host(s):node1:6379,node2:6379
 	Using password:mypassword
