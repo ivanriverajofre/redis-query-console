@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cl.rlabs</groupId>
+	<artifactId>redis-query-console</artifactId>
+	<version>1.0.0</version>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License (GPL)</name>
+			<url>http://www.gnu.org/licenses/gpl.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>ivanriverajofre</id>
+			<name>Iván Rivera</name>
+			<email>ivanriverajofre@gmail.com</email>
+			<timezone>-3</timezone>
+			<roles>
+				<role>project owner</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.2.RELEASE</version>
+	</parent>
+
+	<dependencies>
+	  <dependency>
+		 <groupId>org.springframework.boot</groupId>
+		 <artifactId>spring-boot-starter</artifactId>
+	  </dependency>
+	  <dependency>
+		 <groupId>org.springframework.data</groupId>
+		 <artifactId>spring-data-redis</artifactId>
+	  </dependency>
+	  <dependency>
+		 <groupId>redis.clients</groupId>
+		 <artifactId>jedis</artifactId>
+	  </dependency>	  
+	</dependencies>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>			 
+				<configuration>	
+					<mainClass>cl.rlabs.redis.query.Application</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
